@@ -48,7 +48,7 @@ const Navbar = () => {
 
              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></div>
              <div className="relative bg-black rounded-lg w-full h-full flex items-center justify-center border border-white/20">
-               <img  src="public/logo zyra.jpeg" alt="Logo"/> 
+               <img  src="/logo zyra.jpeg" alt="Logo"/> 
              </div>
           </div>
           <span className="text-white font-bold text-2xl tracking-tighter uppercase italic">Zyra <span className="text-cyan-400 font-light">Systems</span></span>
@@ -213,11 +213,14 @@ const App = () => {
                    </div>
 
                    {/* Central "Z" Logo / Mascot Symbol */}
-                   <div className="relative mb-12">
-                      <div className="absolute inset-0 bg-cyan-400 blur-3xl opacity-20 scale-150"></div>
-                      <div className="relative text-[12rem] font-black italic leading-none text-white select-none group-hover:scale-110 transition-transform duration-500">
-                        <img  src="Zyro.jpeg"  alt="Mascote" />
-                      </div>
+                  <div className="relative mb-12 flex justify-center">
+  <div className="absolute inset-0 bg-cyan-400 blur-3xl opacity-20 scale-150"></div>
+
+  <img  
+    src="/Zyro.jpeg"  
+    alt="Mascote" 
+    className="w-40 md:w-56 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
+  />
                       <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                         <div className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce"></div>
                         <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce delay-75"></div>
