@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "/site-zyra/", // 🔥 ESSA LINHA RESOLVE TUDO
+  base: "/site-zyra/", // adicionei aqui para funcionar no git pages MAS NAO VAIIIIII
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
