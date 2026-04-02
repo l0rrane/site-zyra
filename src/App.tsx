@@ -217,20 +217,15 @@ const App = () => {
   <div className="absolute inset-0 bg-cyan-400 blur-3xl opacity-20 scale-150"></div>
 
   <img  
-    src="/Zyro.jpeg"  
+    src="/zyro.jpeg"  
     alt="Mascote" 
-    className="w-40 md:w-56 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
+    className="w-40 md:w-90 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
   />
                       <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                         <div className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce"></div>
                         <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce delay-75"></div>
                         <div className="w-2 h-2 rounded-full bg-green-400 animate-bounce delay-150"></div>
                       </div>
-                   </div>
-
-                   <div className="text-center">
-                     <div className="text-2xl font-black italic tracking-tighter uppercase mb-2">Mascote Zyro</div>
-                     <div className="text-xs font-bold text-cyan-400 tracking-[0.3em] uppercase opacity-70">Sistema Inteligente Ativo</div>
                    </div>
                 </div>
 
@@ -350,10 +345,10 @@ const App = () => {
                 <div className="relative z-10 w-full aspect-square max-w-[400px] mx-auto bg-black rounded-[3rem] border-4 border-white/10 p-8 flex items-center justify-center shadow-2xl">
                     <div className="text-center">
                       <div className="relative w-32 h-32 mx-auto mb-6">
-                         <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-40 animate-pulse"></div>
-                         <div className="relative w-full h-full bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full flex items-center justify-center">
-                            <Droplets size={64} fill="white" className="text-white" />
-                         </div>
+                        <img src="/logo app.jpeg" alt="logo app" className="w-full h-full object-contain" />
+                         <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-1 animate-pulse"></div>
+                         
+                          
                       </div>
                       <h4 className="text-2xl font-black uppercase tracking-widest italic">Zyra <span className="text-cyan-400">Flow</span></h4>
                       <div className="mt-4 px-4 py-1 bg-white/10 rounded-full text-xs font-bold text-green-400 border border-green-400/20">SISTEMA ONLINE</div>
@@ -371,7 +366,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="text-center md:text-left">
               <div className="flex items-center gap-2 mb-6 justify-center md:justify-start">
-                <div className="w-10 h-10 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded flex items-center justify-center font-bold text-xl italic">Z</div>
+                <img src="/logo zyra.jpeg" alt="Logo" className="w-10 h-10 rounded-lg" />
                 <span className="text-2xl font-black tracking-tighter uppercase italic">ZYRA</span>
               </div>
               <p className="text-gray-500 text-sm max-w-xs">
