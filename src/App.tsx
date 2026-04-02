@@ -1,8 +1,8 @@
-import { 
-  Droplets, 
-  Cpu, 
-  BarChart3, 
-  ShieldCheck, 
+import {
+  Droplets,
+  Cpu,
+  BarChart3,
+  ShieldCheck,
   ExternalLink,
   Menu,
   X,
@@ -12,7 +12,13 @@ import {
   Wifi,
   Layers,
   Activity,
-  ArrowRight
+  ArrowRight,
+  MonitorSmartphone,
+  ServerCog,
+  GraduationCap,
+  Globe,
+  Target,
+  Clock
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,7 +26,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Custom SVGs for Social Media to avoid import issues
 const InstagramIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
 
@@ -44,12 +50,12 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-3 border-b border-purple-500/20' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-3 group cursor-pointer">
-          <div className="w-10 h-10 relative"> 
+          <div className="w-10 h-10 relative">
 
-             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></div>
-             <div className="relative bg-black rounded-lg w-full h-full flex items-center justify-center border border-white/20">
-               <img  src="/logo zyra.jpeg" alt="Logo"/> 
-             </div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative bg-black rounded-lg w-full h-full flex items-center justify-center border border-white/20">
+              <img src="/logo zyra.jpeg" alt="Logo" />
+            </div>
           </div>
           <span className="text-white font-bold text-2xl tracking-tighter uppercase italic">Zyra <span className="text-cyan-400 font-light">Systems</span></span>
         </div>
@@ -70,7 +76,7 @@ const Navbar = () => {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -92,7 +98,7 @@ const Navbar = () => {
 };
 
 const FeatureCard = ({ icon: Icon, title, description, color }: any) => (
-  <motion.div 
+  <motion.div
     whileHover={{ y: -10 }}
     className="bg-white/5 border border-white/10 p-8 rounded-[2rem] backdrop-blur-sm relative group overflow-hidden h-full"
   >
@@ -118,7 +124,7 @@ const App = () => {
         {/* Background Effects */}
         <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-purple-600/5 blur-[120px] rounded-full -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-cyan-600/5 blur-[120px] rounded-full translate-y-1/2"></div>
-        
+
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
           {/* Left Content */}
           <motion.div
@@ -134,18 +140,18 @@ const App = () => {
               </span>
               SISTEMA DE IRRIGAÇÃO INTELIGENTE
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-6 leading-[0.85] tracking-tighter italic">
               ZYRA <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-green-400">
                 SYSTEMS
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl leading-relaxed font-light">
               Tecnologia de ponta em sensores de solo e automação para maximizar sua produtividade agrícola com economia real.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 mb-12">
               <button className="group relative px-10 py-5 bg-white text-black font-black rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -153,7 +159,7 @@ const App = () => {
                   Acessar Plataforma <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
-              
+
               <div className="flex gap-4">
                 <a href="#" className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors group">
                   <InstagramIcon size={24} className="group-hover:text-purple-400 transition-colors" />
@@ -189,13 +195,13 @@ const App = () => {
             className="lg:col-span-5 relative"
           >
             <motion.div
-              animate={{ 
+              animate={{
                 y: [0, -20, 0],
               }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
               }}
               className="relative z-20"
             >
@@ -203,39 +209,39 @@ const App = () => {
               <div className="relative w-full aspect-[4/5] max-w-md mx-auto">
                 {/* Glow Background */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/30 via-purple-500/30 to-green-500/30 blur-[100px] rounded-full scale-75 animate-pulse"></div>
-                
+
                 {/* Mascot Frame */}
                 <div className="relative h-full w-full rounded-[4rem] border border-white/20 bg-gradient-to-b from-white/10 to-transparent backdrop-blur-xl p-8 flex flex-col items-center justify-center overflow-hidden group shadow-2xl">
-                   {/* Circuit Lines Effect */}
-                   <div className="absolute inset-0 opacity-10 pointer-events-none">
-                      <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-cyan-400 to-transparent"></div>
-                      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-                   </div>
+                  {/* Circuit Lines Effect */}
+                  <div className="absolute inset-0 opacity-10 pointer-events-none">
+                    <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-cyan-400 to-transparent"></div>
+                    <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+                  </div>
 
-                   {/* Central "Z" Logo / Mascot Symbol */}
+                  {/* Central "Z" Logo / Mascot Symbol */}
                   <div className="relative mb-12 flex justify-center">
-  <div className="absolute inset-0 bg-cyan-400 blur-3xl opacity-20 scale-150"></div>
+                    <div className="absolute inset-0 bg-cyan-400 blur-3xl opacity-20 scale-150"></div>
 
-  <img  
-    src="/Zyro.jpeg"  
-    alt="Mascote" 
-    className="w-40 md:w-56 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
-  />
-                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                        <div className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce"></div>
-                        <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce delay-75"></div>
-                        <div className="w-2 h-2 rounded-full bg-green-400 animate-bounce delay-150"></div>
-                      </div>
-                   </div>
+                    <img
+                      src="/Zyro.jpeg"
+                      alt="Mascote"
+                      className="w-40 md:w-56 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      <div className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce"></div>
+                      <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce delay-75"></div>
+                      <div className="w-2 h-2 rounded-full bg-green-400 animate-bounce delay-150"></div>
+                    </div>
+                  </div>
 
-                   <div className="text-center">
-                     <div className="text-2xl font-black italic tracking-tighter uppercase mb-2">Mascote Zyro</div>
-                     <div className="text-xs font-bold text-cyan-400 tracking-[0.3em] uppercase opacity-70">Sistema Inteligente Ativo</div>
-                   </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-black italic tracking-tighter uppercase mb-2">Mascote Zyro</div>
+                    <div className="text-xs font-bold text-cyan-400 tracking-[0.3em] uppercase opacity-70">Sistema Inteligente Ativo</div>
+                  </div>
                 </div>
 
                 {/* Satellite Elements */}
-                <motion.div 
+                <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   className="absolute inset-0 border-2 border-dashed border-white/5 rounded-full -m-10 pointer-events-none"
@@ -287,19 +293,19 @@ const App = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
+            <FeatureCard
               icon={Droplets}
               title="Precisão Radical"
               description="Nossos sensores proprietários capturam dados de umidade e nutrientes com precisão laboratorial no campo."
               color="from-cyan-500 to-blue-500"
             />
-            <FeatureCard 
+            <FeatureCard
               icon={Cpu}
               title="Rede Mesh AI"
               description="Sensores que se comunicam entre si criando uma rede inteligente que otimiza o fluxo de água autonomamente."
               color="from-purple-500 to-fuchsia-500"
             />
-            <FeatureCard 
+            <FeatureCard
               icon={BarChart3}
               title="Analytics Avançado"
               description="Dashboards que mostram o ROI em tempo real, economia de recursos e projeção de colheita."
@@ -323,20 +329,20 @@ const App = () => {
                 <p className="text-gray-400 text-lg mb-12 font-medium leading-relaxed">
                   Gerencie sua fazenda de qualquer lugar. Nosso ecossistema de sensores se conecta diretamente ao seu smartphone.
                 </p>
-                
+
                 <div className="grid grid-cols-2 gap-6 mb-12">
-                   <div className="flex flex-col gap-2">
-                      <div className="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400">
-                        <ShieldCheck size={20} />
-                      </div>
-                      <span className="font-bold">Seguro</span>
-                   </div>
-                   <div className="flex flex-col gap-2">
-                      <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
-                        <Zap size={20} />
-                      </div>
-                      <span className="font-bold">Rápido</span>
-                   </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                      <ShieldCheck size={20} />
+                    </div>
+                    <span className="font-bold">Seguro</span>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                      <Zap size={20} />
+                    </div>
+                    <span className="font-bold">Rápido</span>
+                  </div>
                 </div>
 
                 <button className="bg-white text-black px-10 py-5 rounded-2xl font-black flex items-center gap-3 hover:bg-cyan-400 transition-colors uppercase tracking-tighter">
@@ -348,17 +354,253 @@ const App = () => {
                 <div className="absolute inset-0 bg-purple-500/20 blur-[100px]"></div>
                 {/* Visualizing the drop logo from user image */}
                 <div className="relative z-10 w-full aspect-square max-w-[400px] mx-auto bg-black rounded-[3rem] border-4 border-white/10 p-8 flex items-center justify-center shadow-2xl">
-                    <div className="text-center">
-                      <div className="relative w-32 h-32 mx-auto mb-6">
-                         <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-40 animate-pulse"></div>
-                         <div className="relative w-full h-full bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full flex items-center justify-center">
-                            <Droplets size={64} fill="white" className="text-white" />
-                         </div>
+                  <div className="text-center">
+                    <div className="relative w-32 h-32 mx-auto mb-6">
+                      <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-40 animate-pulse"></div>
+                      <div className="relative w-full h-full bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full flex items-center justify-center">
+                        <Droplets size={64} fill="white" className="text-white" />
                       </div>
-                      <h4 className="text-2xl font-black uppercase tracking-widest italic">Zyra <span className="text-cyan-400">Flow</span></h4>
-                      <div className="mt-4 px-4 py-1 bg-white/10 rounded-full text-xs font-bold text-green-400 border border-green-400/20">SISTEMA ONLINE</div>
                     </div>
+                    <h4 className="text-2xl font-black uppercase tracking-widest italic">Zyra <span className="text-cyan-400">Flow</span></h4>
+                    <div className="mt-4 px-4 py-1 bg-white/10 rounded-full text-xs font-bold text-green-400 border border-green-400/20">SISTEMA ONLINE</div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-24 overflow-hidden p-8 md:p-20">
+
+        <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+          <div className="text-[10rem] md:text-[12rem] font-black leading-none italic">
+            WHO
+          </div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-4xl md:text-6xl font-black mb-8 italic leading-tight">
+              QUEM <br />
+              <span className="text-purple-500">SOMOS.</span>
+            </h2>
+
+            <p className="text-gray-400 text-lg font-medium leading-relaxed">
+              Conheça a base da nossa startup, desde a origem da ideia até o impacto que buscamos gerar.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-cyan-400/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4">
+                <Clock size={22} />
+              </div>
+
+              <h3 className="text-xl font-black uppercase italic mb-4">
+                História
+              </h3>
+
+              <p className="text-sm text-gray-400 leading-relaxed">
+                A ideia da Zyra Flow surgiu a partir da necessidade de melhorar o monitoramento
+                e a gestão no campo. Observamos dificuldades no controle de dados e na tomada
+                de decisões rápidas, o que motivou a criação de uma solução tecnológica acessível.
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-purple-400/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                <Target size={22} />
+              </div>
+
+              <h3 className="text-xl font-black uppercase italic mb-4">
+                Propósito
+              </h3>
+
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Nosso propósito é levar tecnologia inteligente ao agronegócio, proporcionando
+                mais controle, eficiência e segurança para produtores. Buscamos transformar
+                dados em decisões estratégicas que realmente impactam resultados.
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-green-400/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 mb-4">
+                <Globe size={22} />
+              </div>
+
+              <h3 className="text-xl font-black uppercase italic mb-4">
+                Contexto
+              </h3>
+
+              <p className="text-sm text-gray-400 leading-relaxed">
+                No cenário atual, o agronegócio exige cada vez mais precisão e agilidade.
+                A Zyra Flow surge como uma startup focada em integrar sensores e software,
+                criando um ecossistema digital que conecta tecnologia e produtividade no campo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipe" className="py-24 overflow-hidden p-8 md:p-20">
+
+        <div className="relative z-10">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-4xl md:text-6xl font-black mb-8 italic leading-tight">
+              ESTRUTURA <br />
+              <span className="text-purple-500">DA EQUIPE.</span>
+            </h2>
+
+            <p className="text-gray-400 text-lg font-medium leading-relaxed">
+              Conheça a organização da nossa equipe, os papéis de cada integrante no
+              desenvolvimento da startup e a orientação acadêmica do projeto.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md">
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 text-center backdrop-blur-sm shadow-xl">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-yellow-400/30 bg-white/5 flex items-center justify-center">
+
+                  <span className="text-xs text-gray-500 font-bold uppercase">Foto</span>
+                </div>
+
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400">
+                  <GraduationCap size={26} />
+                </div>
+
+                <h3 className="text-xl font-black uppercase italic mb-2">
+                  Marco Sales
+                </h3>
+
+                <span className="inline-block px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-400 text-xs font-black uppercase tracking-wider border border-yellow-400/20">
+                  Professor Orientador
+                </span>
+
+                <p className="text-sm text-gray-400 leading-relaxed mt-4">
+                  Responsável por orientar o desenvolvimento da startup, acompanhar a evolução
+                  do projeto e apoiar a equipe nas decisões estratégicas e acadêmicas.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-[2px] h-10 bg-gradient-to-b from-yellow-400 to-purple-500"></div>
+
+
+            <div className="w-[2px] h-10 bg-gradient-to-b from-purple-500 to-cyan-400"></div>
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
+
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-cyan-400/30 transition-all">
+                <div className="w-24 h-24 mx-auto mb-5 rounded-full overflow-hidden border-2 border-cyan-400/30 bg-white/5 flex items-center justify-center">
+
+                  <span className="text-xs text-gray-500 font-bold uppercase">Foto</span>
+                </div>
+
+                <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4 mx-auto">
+                  <ServerCog size={22} />
+                </div>
+
+                <h4 className="text-lg font-black uppercase italic mb-2 text-center">
+                  Henrique da Silva Reis
+                </h4>
+
+                <span className="block text-cyan-400 text-xs font-black uppercase tracking-wide text-center">
+                  Backend + Integração IoT
+                </span>
+
+                <p className="text-sm text-gray-400 leading-relaxed mt-4 text-center">
+                  Responsável pelo desenvolvimento do backend, criação da API e integração
+                  do sistema com Arduino e dispositivos IoT.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-purple-400/30 transition-all">
+                <div className="w-24 h-24 mx-auto mb-5 rounded-full overflow-hidden border-2 border-purple-400/30 bg-white/5 flex items-center justify-center">
+
+                  <span className="text-xs text-gray-500 font-bold uppercase">Foto</span>
+                </div>
+
+                <div className="flex justify-center gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                    <MonitorSmartphone size={18} />
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                    <Database size={18} />
+                  </div>
+                </div>
+
+                <h4 className="text-lg font-black uppercase italic mb-2 text-center">
+                  Ester Lima Barreto
+                </h4>
+
+                <span className="block text-purple-400 text-xs font-black uppercase tracking-wide text-center">
+                  Front-end + Banco de Dados
+                </span>
+
+                <p className="text-sm text-gray-400 leading-relaxed mt-4 text-center">
+                  Responsável pela construção da interface da aplicação e apoio na organização,
+                  modelagem e manipulação do banco de dados.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-pink-400/30 transition-all">
+                <div className="w-24 h-24 mx-auto mb-5 rounded-full overflow-hidden border-2 border-pink-400/30 bg-white/5 flex items-center justify-center">
+
+                  <span className="text-xs text-gray-500 font-bold uppercase">Foto</span>
+                </div>
+
+                <div className="flex justify-center gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                    <MonitorSmartphone size={18} />
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                    <Database size={18} />
+                  </div>
+                </div>
+
+                <h4 className="text-lg font-black uppercase italic mb-2 text-center">
+                  Gabriela L. M. Spin
+                </h4>
+
+                <span className="block text-pink-400 text-xs font-black uppercase tracking-wide text-center">
+                  Front-end + Banco de Dados
+                </span>
+
+                <p className="text-sm text-gray-400 leading-relaxed mt-4 text-center">
+                  Atua no desenvolvimento visual da plataforma e também contribui na estruturação
+                  e suporte das informações armazenadas no banco de dados.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-6 backdrop-blur-sm hover:border-red-400/30 transition-all">
+                <div className="w-24 h-24 mx-auto mb-5 rounded-full overflow-hidden border-2 border-red-400/30 bg-white/5 flex items-center justify-center">
+
+                  <span className="text-xs text-gray-500 font-bold uppercase">Foto</span>
+                </div>
+
+                <div className="flex justify-center gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                    <MonitorSmartphone size={18} />
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                    <Database size={18} />
+                  </div>
+                </div>
+
+                <h4 className="text-lg font-black uppercase italic mb-2 text-center">
+                  Tayla Caroline Cazarine
+                </h4>
+
+                <span className="block text-red-400 text-xs font-black uppercase tracking-wide text-center">
+                  Front-end + Banco de Dados
+                </span>
+
+                <p className="text-sm text-gray-400 leading-relaxed mt-4 text-center">
+                  Atua no desenvolvimento visual da plataforma e também contribui na estruturação e suporte das informações armazenadas no banco de dados.
+                </p>
               </div>
             </div>
           </div>
@@ -380,15 +622,15 @@ const App = () => {
             </div>
 
             <div className="flex flex-col items-center gap-4">
-               <div className="flex gap-4">
-                  <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-all border border-white/10">
-                    <InstagramIcon size={24} />
-                  </a>
-                  <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all border border-white/10">
-                    <TikTokIcon size={24} />
-                  </a>
-               </div>
-               <div className="text-gray-600 text-xs font-bold uppercase tracking-widest">Social Media</div>
+              <div className="flex gap-4">
+                <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-all border border-white/10">
+                  <InstagramIcon size={24} />
+                </a>
+                <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all border border-white/10">
+                  <TikTokIcon size={24} />
+                </a>
+              </div>
+              <div className="text-gray-600 text-xs font-bold uppercase tracking-widest">Social Media</div>
             </div>
 
             <div className="flex flex-col items-center md:items-end gap-2">
