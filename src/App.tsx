@@ -613,7 +613,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="text-center md:text-left">
               <div className="flex items-center gap-2 mb-6 justify-center md:justify-start">
-                <div className="w-10 h-10 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded flex items-center justify-center font-bold text-xl italic">Z</div>
+                <img src="/logo zyra.jpeg" alt="Logo" className="w-10 h-10 rounded-lg" />
                 <span className="text-2xl font-black tracking-tighter uppercase italic">ZYRA</span>
               </div>
               <p className="text-gray-500 text-sm max-w-xs">
