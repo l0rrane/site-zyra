@@ -63,6 +63,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
           <a href="#features" className="text-gray-300 hover:text-cyan-400 transition-colors uppercase">Tecnologia</a>
           <a href="#about" className="text-gray-300 hover:text-cyan-400 transition-colors uppercase">Sobre</a>
+          <a href="#equipe" className="text-gray-300 hover:text-cyan-400 transition-colors uppercase">Equipe</a>
           <a href="#app" className="text-gray-300 hover:text-cyan-400 transition-colors uppercase">App</a>
           <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-all flex items-center gap-2">
             ACESSAR SISTEMA <ExternalLink size={16} />
@@ -86,6 +87,8 @@ const Navbar = () => {
               <a href="#features" onClick={() => setIsOpen(false)} className="text-xl text-gray-300 uppercase font-bold">Tecnologia</a>
               <a href="#about" onClick={() => setIsOpen(false)} className="text-xl text-gray-300 uppercase font-bold">Sobre</a>
               <a href="#app" onClick={() => setIsOpen(false)} className="text-xl text-gray-300 uppercase font-bold">App</a>
+              <a href="#equipe" onClick={() => setIsOpen(false)} className="text-xl text-gray-300 uppercase font-bold">Equipe</a>
+              
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-4 rounded-xl font-bold uppercase">
                 Acessar Sistema
               </button>
@@ -225,7 +228,7 @@ const App = () => {
                     <img
                       src="/Zyro.jpeg"
                       alt="Mascote"
-                      className="w-40 md:w-56 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
+                      className="w-40 md:w-90 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                       <div className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce"></div>
@@ -234,10 +237,7 @@ const App = () => {
                     </div>
                   </div>
 
-                  <div className="text-center">
-                    <div className="text-2xl font-black italic tracking-tighter uppercase mb-2">Mascote Zyro</div>
-                    <div className="text-xs font-bold text-cyan-400 tracking-[0.3em] uppercase opacity-70">Sistema Inteligente Ativo</div>
-                  </div>
+                
                 </div>
 
                 {/* Satellite Elements */}
@@ -356,10 +356,8 @@ const App = () => {
                 <div className="relative z-10 w-full aspect-square max-w-[400px] mx-auto bg-black rounded-[3rem] border-4 border-white/10 p-8 flex items-center justify-center shadow-2xl">
                   <div className="text-center">
                     <div className="relative w-32 h-32 mx-auto mb-6">
-                      <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-40 animate-pulse"></div>
-                      <div className="relative w-full h-full bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full flex items-center justify-center">
-                        <Droplets size={64} fill="white" className="text-white" />
-                      </div>
+                      <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-20 animate-pulse"></div>
+                      <img src="/logo app.jpeg" alt="Logo" />
                     </div>
                     <h4 className="text-2xl font-black uppercase tracking-widest italic">Zyra <span className="text-cyan-400">Flow</span></h4>
                     <div className="mt-4 px-4 py-1 bg-white/10 rounded-full text-xs font-bold text-green-400 border border-green-400/20">SISTEMA ONLINE</div>
@@ -562,7 +560,7 @@ const App = () => {
                 </div>
 
                 <h4 className="text-lg font-black uppercase italic mb-2 text-center">
-                  Gabriela L. M. Spin
+                  Gabriela L. M. Espin
                 </h4>
 
                 <span className="block text-pink-400 text-xs font-black uppercase tracking-wide text-center">
